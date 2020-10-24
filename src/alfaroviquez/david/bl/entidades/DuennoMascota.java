@@ -70,13 +70,12 @@ public class DuennoMascota {
 
     @Override
     public String toString() {
-        return "DuennoMascota{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido1='" + apellido1 + '\'' +
-                ", apellido2='" + apellido2 + '\'' +
-                ", cedula='" + cedula + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", direccion='" + direccion + '\'' +
-                '}';
+        String msg;
+        msg = "========================================================================" + "\n";
+        msg = msg + "Nombre: " + nombre + "\t\t" + "Apellidos: " + apellido1 + "\t" + apellido2 + "\n";
+        msg = msg + "Cedula: " + cedula + "\t\t" + "Telefono: " + telefono + "\n";
+        msg = msg + "Direccion: " + direccion + "\n";
+        msg = msg + "==========================================================================";
+        return msg;
     }
 }
