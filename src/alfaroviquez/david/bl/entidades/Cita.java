@@ -1,9 +1,12 @@
 package alfaroviquez.david.bl.entidades;
 
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class Cita {
     private String nombreMascota;
-    private String fecha;
-    private String hora;
+    private LocalDate fecha;
+    private LocalTime hora;
     private String observaciones;
 
     public String getNombreMascota() {
@@ -14,19 +17,19 @@ public class Cita {
         this.nombreMascota = nombreMascota;
     }
 
-    public String getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
-    public String getHora() {
+    public LocalTime getHora() {
         return hora;
     }
 
-    public void setHora(String hora) {
+    public void setHora(LocalTime hora) {
         this.hora = hora;
     }
 
@@ -41,7 +44,7 @@ public class Cita {
     public Cita() {
     }
 
-    public Cita(String nombreMascota, String fecha, String hora, String observaciones) {
+    public Cita(String nombreMascota, LocalDate fecha, LocalTime hora, String observaciones) {
         this.nombreMascota = nombreMascota;
         this.fecha = fecha;
         this.hora = hora;
@@ -52,8 +55,8 @@ public class Cita {
     public String toString() {
         return "Cita{" +
                 "nombreMascota='" + nombreMascota + '\'' +
-                ", fecha='" + fecha + '\'' +
-                ", hora='" + hora + '\'' +
+                ", fecha=" + fecha +
+                ", hora=" + hora +
                 ", observaciones='" + observaciones + '\'' +
                 '}';
     }

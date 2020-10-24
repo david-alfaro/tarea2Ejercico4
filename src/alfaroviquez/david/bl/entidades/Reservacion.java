@@ -1,9 +1,11 @@
 package alfaroviquez.david.bl.entidades;
 
+import java.time.LocalDate;
+
 public class Reservacion {
     private String nombreMascota;
-    private String fechaEntrada;
-    private String fechaSalida;
+    private LocalDate fechaEntrada;
+    private LocalDate fechaSalida;
 
     public String getNombreMascota() {
         return nombreMascota;
@@ -13,26 +15,26 @@ public class Reservacion {
         this.nombreMascota = nombreMascota;
     }
 
-    public String getFechaEntrada() {
+    public LocalDate getFechaEntrada() {
         return fechaEntrada;
     }
 
-    public void setFechaEntrada(String fechaEntrada) {
+    public void setFechaEntrada(LocalDate fechaEntrada) {
         this.fechaEntrada = fechaEntrada;
     }
 
-    public String getFechaSalida() {
+    public LocalDate getFechaSalida() {
         return fechaSalida;
     }
 
-    public void setFechaSalida(String fechaSalida) {
+    public void setFechaSalida(LocalDate fechaSalida) {
         this.fechaSalida = fechaSalida;
     }
 
     public Reservacion() {
     }
 
-    public Reservacion(String nombreMascota, String fechaEntrada, String fechaSalida) {
+    public Reservacion(String nombreMascota, LocalDate fechaEntrada, LocalDate fechaSalida) {
         this.nombreMascota = nombreMascota;
         this.fechaEntrada = fechaEntrada;
         this.fechaSalida = fechaSalida;
@@ -42,8 +44,8 @@ public class Reservacion {
     public String toString() {
         return "Reservacion{" +
                 "nombreMascota='" + nombreMascota + '\'' +
-                ", fechaEntrada='" + fechaEntrada + '\'' +
-                ", fechaSalida='" + fechaSalida + '\'' +
+                ", fechaEntrada=" + fechaEntrada +
+                ", fechaSalida=" + fechaSalida +
                 '}';
     }
 }
