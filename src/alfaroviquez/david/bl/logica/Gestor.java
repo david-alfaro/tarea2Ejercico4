@@ -4,6 +4,7 @@ import alfaroviquez.david.bl.entidades.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 
 public class Gestor {
@@ -55,8 +56,10 @@ public class Gestor {
     }
 
     public void crearCita(String nombreMascota,String fecha,String hora,String observaciones){
-        LocalDate fechaCita = LocalDate.parse(fecha);
-        LocalTime horaCita = LocalTime.parse(hora);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fechaCita = LocalDate.parse(fecha,formatter);
+        DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
+        LocalTime horaCita = LocalTime.parse(hora,dtf);
         Cita nuevaCita = new Cita(nombreMascota,fechaCita,horaCita,observaciones);
         citas.add(nuevaCita);
     }
@@ -65,8 +68,9 @@ public class Gestor {
     }
 
     public void crearReservacion(String nombreMascota,String fechaEntrada,String fechaSalida){
-        LocalDate fechInicio = LocalDate.parse(fechaEntrada);
-        LocalDate fechFin = LocalDate.parse(fechaSalida);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fechInicio = LocalDate.parse(fechaEntrada,formatter);
+        LocalDate fechFin = LocalDate.parse(fechaSalida,formatter);
         Reservacion nuevaReservacion = new Reservacion(nombreMascota,fechInicio,fechFin);
         reservaciones.add(nuevaReservacion);
     }

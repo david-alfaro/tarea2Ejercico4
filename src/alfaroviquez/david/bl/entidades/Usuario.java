@@ -90,15 +90,13 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return "Usuario{" +
-                "nombre='" + nombre + '\'' +
-                ", apellido1='" + apellido1 + '\'' +
-                ", apellido2='" + apellido2 + '\'' +
-                ", cedula='" + cedula + '\'' +
-                ", telefono='" + telefono + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", estado='" + estado + '\'' +
-                ", rol='" + rol + '\'' +
-                '}';
+        String msg;
+        msg = "========================================================================" + "\n";
+        msg = msg + "Nombre: " + nombre + "\t\t" + "Apellidos: " + apellido1 + "\t" + apellido2 + "\n";
+        msg = msg + "Cedula: " + cedula + "\t\t" + "Telefono: " + telefono + "\n";
+        msg = msg + "Direccion: " + direccion + "\n";
+        msg = msg + "Estado: "+estado+"\t\t\t"+ "Rol: "+rol+"\n";
+        msg = msg + "==========================================================================";
+        return msg;
     }
 }

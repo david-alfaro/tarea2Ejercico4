@@ -53,11 +53,11 @@ public class Cita {
 
     @Override
     public String toString() {
-        return "Cita{" +
-                "nombreMascota='" + nombreMascota + '\'' +
-                ", fecha=" + fecha +
-                ", hora=" + hora +
-                ", observaciones='" + observaciones + '\'' +
-                '}';
+        String msg;
+        msg = "======================================="+"\n";
+        msg = msg+"Cita para: "+nombreMascota+"\t\t"+"Fecha de cita: "+fecha+"\t\t"+"Hora: "+hora+"\n";
+        msg = msg+"Observaciones: "+observaciones+"\n";
+        msg=msg+"========================================";
+        return msg;
     }
 }

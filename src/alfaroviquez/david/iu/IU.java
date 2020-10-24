@@ -16,8 +16,8 @@ public class IU {
         output.println("5. Registrar empleado");
         output.println("6. Listar dueños");
         output.println("7. Listar mascotas");
-        output.println("8. Registrar citas");
-        output.println("9. Registrar reservaciones");
+        output.println("8. Listar citas");
+        output.println("9. Listar reservaciones");
         output.println("10. Listar empleados");
         output.println("11. Salir");
     }

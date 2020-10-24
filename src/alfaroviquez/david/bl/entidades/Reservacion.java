@@ -42,10 +42,12 @@ public class Reservacion {
 
     @Override
     public String toString() {
-        return "Reservacion{" +
-                "nombreMascota='" + nombreMascota + '\'' +
-                ", fechaEntrada=" + fechaEntrada +
-                ", fechaSalida=" + fechaSalida +
-                '}';
+        String msg;
+        msg = "==============================="+"\n";
+        msg = msg+"Reservacion de hotel"+"\n";
+        msg = msg+"Nombre: "+nombreMascota+"\n";
+        msg = msg+"Fecha de entrada: "+fechaEntrada+"\t\t\t"+"Fecha de salida: "+fechaSalida+"\n";
+        msg = msg+"=======================================";
+        return msg;
     }
 }
