@@ -60,12 +60,13 @@ public class Mascota {
 
     @Override
     public String toString() {
-        return "Mascota{" +
-                "nombre='" + nombre + '\'' +
-                ", duenno=" + duenno +
-                ", foto='" + foto + '\'' +
-                ", observaciones='" + observaciones + '\'' +
-                ", ranking=" + ranking +
-                '}';
+        String msg;
+        msg = "======================================================="+"\n";
+        msg = msg + "Nombre: "+nombre+"\n";
+        msg = msg + "Dueño: "+duenno+"\n";
+        msg = msg+"Observaciones: "+observaciones+"\n";
+        msg = msg +"Ranking: "+ranking+"\n";
+        msg = msg+"=======================================================";
+        return msg;
     }
 }

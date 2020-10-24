@@ -1,6 +1,7 @@
 package alfaroviquez.david.controlador;
 
 import alfaroviquez.david.bl.entidades.DuennoMascota;
+import alfaroviquez.david.bl.entidades.Mascota;
 import alfaroviquez.david.bl.logica.Gestor;
 import alfaroviquez.david.iu.IU;
 
@@ -35,6 +36,7 @@ public class Controlador {
                 listarDuennosMascota();
                 break;
             case 7:
+                listarMascotas();
                 break;
             case 8:
                 break;
@@ -74,7 +76,28 @@ public class Controlador {
             iu.imprimirMensaje(duenno.toString());
         }
     }
-    public void registrarMascota(){
-        
+
+    public void registrarMascota() {
+        iu.imprimirMensaje("***Registrar Mascota***");
+        iu.imprimirMensaje("Nombre: ");
+        String nombre = iu.leerTexto();
+        iu.imprimirMensaje("Identificacion del dueño: ");
+        String cedula = iu.leerTexto();
+        DuennoMascota duenno = gestor.buscarDuenno(cedula);
+        iu.imprimirMensaje("Foto: ");
+        String foto = iu.leerTexto();
+        iu.imprimirMensaje("Observaciones: ");
+        String observaciones = iu.leerTexto();
+        iu.imprimirMensaje("Ranking de la mascota: ");
+        int ranking = iu.leerNumero();
+        gestor.crearMascota(nombre, duenno, foto, observaciones, ranking);
+        iu.imprimirMensaje("Mascota registrada exitosamente! ");
+    }
+
+    public void listarMascotas() {
+        for (Mascota mascota : gestor.listarMascotas()
+        ) {
+            iu.imprimirMensaje(mascota.toString());
+        }
     }
 }
