@@ -1,5 +1,14 @@
 package alfaroviquez.david.bl.entidades;
 
+/**
+ * Clase Dueño de Mascota
+ * Esta clase se usa para crear objetos de tipo Dueño
+ * Se usa para crear un dueño de una mascota
+ *
+ * @author David Alfaro Viquez
+ * @version 1.0
+ * @since 24/10/2020
+ */
 public class DuennoMascota {
     private String nombre;
     private String apellido1;
@@ -59,6 +68,16 @@ public class DuennoMascota {
     public DuennoMascota() {
     }
 
+    /**
+     * Constructor de la clase
+     *
+     * @param nombre del dueño
+     * @param apellido1 del dueño
+     * @param apellido2 del dueño
+     * @param cedula del dueño
+     * @param telefono del dueño
+     * @param direccion del dueño
+     */
     public DuennoMascota(String nombre, String apellido1, String apellido2, String cedula, String telefono, String direccion) {
         this.nombre = nombre;
         this.apellido1 = apellido1;

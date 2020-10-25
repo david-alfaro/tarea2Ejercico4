@@ -2,6 +2,15 @@ package alfaroviquez.david.bl.entidades;
 
 import java.time.LocalDate;
 
+/**
+ * Clase Reservacion
+ * Con esta clase se instancia la clase reservacion para crear nuevas reservaciones de mascota
+ * Para crear un nuevo objeto de esta clase es necesario el nombre de la mascota, la fecha de entrada, y la fecha de salida
+ *
+ * @author David Alfaro Viquez
+ * @version 1.0
+ * @since 24/10/2020
+ */
 public class Reservacion {
     private String nombreMascota;
     private LocalDate fechaEntrada;

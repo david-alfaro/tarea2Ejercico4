@@ -1,5 +1,15 @@
 package alfaroviquez.david.bl.entidades;
 
+/**
+ * Clase Mascota
+ * Para poder crear una instancia de la clase Mascota,
+ * es necesario indicar en el constructor el nombre de la mascota,
+ * el dueno de la misma, la foto de la mascota, observaciones de la masscota y el ranking, este ultimo atributo solamente lo assigna el doctor
+ *
+ * @author David Alfaro Viquez
+ * @version 1.0
+ * @since 24/10/2020
+ */
 public class Mascota {
     private String nombre;
     private DuennoMascota duenno;

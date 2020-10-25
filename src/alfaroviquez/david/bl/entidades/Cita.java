@@ -3,6 +3,15 @@ package alfaroviquez.david.bl.entidades;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
+/**
+ * Clase Cita
+ * Para crear una instancia de la clase cita se necestia el nombre de la mascota,
+ * la fecha y hora de la cita, y observaciones de para que sera la cita por ejemplo peluqueria
+ *
+ * @author David Alfaro Viquez
+ * @version 1.0
+ * @since 24/10/2020
+ */
 public class Cita {
     private String nombreMascota;
     private LocalDate fecha;

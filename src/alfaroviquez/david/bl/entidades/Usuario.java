@@ -1,5 +1,15 @@
 package alfaroviquez.david.bl.entidades;
 
+/**
+ * Clase Usuario
+ * Para crear una instancia de la clase usuario es necesario pasarle al constructor,
+ * el nombre, apellidos, cedula, telefono, direccion, estado que puede indicar si el usuario esta activo o inactivo,
+ * y el rol que cumple el usuario en la veterinaria que puede ser doctor(a) o secretario(a).
+ *
+ * @author David Alfaro Viquez
+ * @version 1.0
+ * @since 24/10/2020
+ */
 public class Usuario {
     private String nombre;
     private String apellido1;

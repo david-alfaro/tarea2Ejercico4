@@ -4,10 +4,22 @@ import alfaroviquez.david.bl.entidades.*;
 import alfaroviquez.david.bl.logica.Gestor;
 import alfaroviquez.david.iu.IU;
 
+/**
+ * Clase controlador
+ * En esta clase se captura la informacion del usuario y se le envia al Gestor
+ *
+ * @author David Alfaro Viquez
+ * @version 1.0
+ * @since 24/10/2020
+ */
 public class Controlador {
     Gestor gestor = new Gestor();
     IU iu = new IU();
 
+    /**
+     * Metodo para ejecutar el programa
+     * Muestra la opcion de menu y procesa la opcion del usuario
+     */
     public void ejecutarPrograma() {
         int opcion = 0;
         do {
@@ -17,6 +29,11 @@ public class Controlador {
         } while (opcion != 11);
     }
 
+    /**
+     * Metodo para procesar la opcion escogida por el usuario
+     *
+     * @param opcion indicada por el usuario
+     */
     private void procesarOpcion(int opcion) {
         switch (opcion) {
             case 1:
@@ -56,6 +73,9 @@ public class Controlador {
         }
     }
 
+    /**
+     * Funcion para registrar un dueno de mascota
+     */
     private void registrarDuenno() {
         iu.imprimirMensaje("***Registrar Dueño de Mascota***");
         iu.imprimirMensaje("Nombre: ");
@@ -75,6 +95,9 @@ public class Controlador {
 
     }
 
+    /**
+     * Metodo para listar los duenos de mascotas
+     */
     private void listarDuennosMascota() {
         for (DuennoMascota duenno : gestor.listarDuennos()
         ) {
@@ -82,6 +105,9 @@ public class Controlador {
         }
     }
 
+    /**
+     * Metodo para registrar mascotas en el sistema
+     */
     public void registrarMascota() {
         iu.imprimirMensaje("***Registrar Mascota***");
         iu.imprimirMensaje("Nombre: ");
@@ -99,6 +125,9 @@ public class Controlador {
         iu.imprimirMensaje("Mascota registrada exitosamente! ");
     }
 
+    /**
+     * Metodo para listar mascotas creaadas
+     */
     public void listarMascotas() {
         for (Mascota mascota : gestor.listarMascotas()
         ) {
@@ -106,6 +135,9 @@ public class Controlador {
         }
     }
 
+    /**
+     * Metodo para registrar citas para mascotas
+     */
     public void registrarCita() {
         iu.imprimirMensaje("***Registrar Cita***");
         iu.imprimirMensaje("Nombre de mascota: ");
@@ -120,6 +152,9 @@ public class Controlador {
         iu.imprimirMensaje("Se ha creado una cita de forma exitosa!");
     }
 
+    /**
+     * Metodo apra listar citas
+     */
     public void listarCitas() {
         for (Cita cita : gestor.listarCitas()
         ) {
@@ -127,6 +162,9 @@ public class Controlador {
         }
     }
 
+    /**
+     * Metodo para registrar reservaciones para mascotas
+     */
     public void registrarReservacion() {
         iu.imprimirMensaje("***Registrar reservacion de hotel para mascota***");
         iu.imprimirMensaje("Ingrese el nombre de la mascota: ");
@@ -139,6 +177,9 @@ public class Controlador {
         iu.imprimirMensaje("Reservacion creada!");
     }
 
+    /**
+     * Metodo para listar reservaciones
+     */
     public void listarReservaciones() {
         for (Reservacion reservacion : gestor.listarReservaciones()
         ) {
@@ -146,6 +187,9 @@ public class Controlador {
         }
     }
 
+    /**
+     * Metodo para registrar empleados de la veterinaria
+     */
     public void registrarEmpleado() {
         iu.imprimirMensaje("***Registrar empleado de Veterinaria MOKA***");
         iu.imprimirMensaje("Nombre: ");
@@ -168,6 +212,9 @@ public class Controlador {
         iu.imprimirMensaje("Empleado registrado");
     }
 
+    /**
+     * Metodo para listar empleados
+     */
     public void listarEmpleados() {
         for (Usuario empleado : gestor.listarUsuarios()
         ) {
